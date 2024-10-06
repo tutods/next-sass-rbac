@@ -1,0 +1,16 @@
+{
+  "name": "next-sass-rbac",
+  "private": true,
+  "packageManager": "pnpm@9.12.0"
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@sass/biome-config": "*",
+    "turbo": "^2.1.3",
+    "typescript": "^5.4.5"
+  }
+}
