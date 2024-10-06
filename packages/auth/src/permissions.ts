@@ -18,9 +18,14 @@ const permissions: Record<Role, PermissionsByRole> = {
       ownerId: { $eq: user.id },
     });
   },
-  MEMBER(user, { can }) {
+  MEMBER(user, { can, cannot }) {
     can('get', 'User');
     can(['create', 'get'], 'Project');
+
+    /**
+     * Only allow to update or delete the project if it's the owner of that project.
+     */
+    cannot(['update', 'delete'], 'Project');
     can(['update', 'delete'], 'Project', {
       ownerId: { $eq: user.id },
     });
