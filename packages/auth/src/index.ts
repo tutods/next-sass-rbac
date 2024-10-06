@@ -25,3 +25,5 @@ function defineAbilityFor(user: User) {
 
 export { defineAbilityFor };
 export type { AppAbility, AppAbilities };
+
+export * from './models';
